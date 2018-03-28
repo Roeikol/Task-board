@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Task Board</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Pangolin|Permanent+Marker" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+
+		<header>
+			<img src="images/headline.png">
+		</header>
+
+<!-- Note input form -->
+
+		<form id="form">
+			<textarea autofocus maxlength="111" id="input-text" placeholder="Enter your task here"></textarea>
+			<div id="date-time-stamp">
+				<span class="date-time-stamp-divider">
+					<label for="date">Date:</label>
+					<input id="date" type="date"  name="date-name" required="now" />
+				</span>
+				<span>
+					<label for="time">Time:</label>
+					<input id="time" type="time"  name="time-name" required />
+				</span>
+				<span>
+					<input id="submit" type="submit" name="submit" value="Add task"/>
+				</span>
+			</div>
+		</form>
+
+<!-- Notes output section -->
+
+		<section class="notes-container">
+			
+		</section> 
+
+	</div>
+	
+	<script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>

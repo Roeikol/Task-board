@@ -1,0 +1,181 @@
+body{
+	margin: 0;
+	background-image: url("../images/tile.jpg");
+	font-family: 'Pangolin', cursive;
+	font-family: 'Permanent Marker', cursive;
+}
+body #wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+header img{
+	display: block;
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+/*---Note input form---*/
+
+#wrapper #form{
+	max-width: 600px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-image: url("../images/formbg.jpg");
+}
+#form textarea{
+	border: none;
+	width: 493px;
+	height: 145px;
+	background-color:rgba(0, 0, 0, 0.0);
+	font-size: 27px;
+	padding: 13px 30px 10px 77px;
+	resize: none;
+	color: black;
+	line-height: 33px;
+}
+#form textarea:focus{
+	outline: none;
+}
+#date-time-stamp{
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 77px;
+}
+#date-time-stamp span label{
+	font-size: 20px;
+}
+#date-time-stamp span input{
+	border: none;
+	background-color: rgb(247,247,247);
+	padding-right: 1%;
+}
+#date-time-stamp span #submit{
+	font-size: 20px;
+	padding-bottom: 0;
+}
+#date-time-stamp #error-text{
+	float: right;
+	color: black;
+}
+
+/*---Notes output section---*/
+
+.notes-container{
+	display: flex;
+	flex-wrap: wrap;
+	width:100%;
+	margin: 30px auto;
+}
+.note-wrapper-invisible{
+	margin-right: 30px;
+	opacity: 0;
+	transition: opacity 2s ease-in-out;
+}
+.note-wrapper-visible{
+	opacity: 1;
+}
+.output-note{
+	background-image: url("../images/notebg.png");
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 30px;
+	display: flex;
+	position: relative;
+
+}
+.output-note .note-delete:after{
+	position: absolute;
+	right: 5px;
+	top: 15px;
+	content: "\01F5D1";
+	font-size: 25px;
+	cursor: pointer;
+	font-weight: bold;
+	color: black;
+	display: none;
+}
+.output-note:hover .note-delete:after{
+	display: block;
+}
+.output-note .note-body{
+	width: 93%;
+	height: 60%;
+	margin-top: 37px;
+	margin-left: 10px;
+	margin-right: 3px;
+  	flex: 1 0 0;
+  	overflow: auto;
+  	display: block;
+}
+.output-note .note-footer{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+@media only screen and (max-width : 992px) {
+	#wrapper #form{
+		max-width: 600px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}	
+	#form textarea{
+		max-width: 600px;
+	}
+
+}
+@media only screen and (max-width: 768px){
+	#wrapper #form{
+		max-width: 100%;
+		height: 240px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}	
+	#form textarea{
+		max-width: 80%;
+	}
+	.notes-container{
+		width: 100%;
+		margin: 0 auto ;
+		margin-top: 30px;
+	}
+	#form #date-time-stamp .date-time-stamp-divider{
+		display: block;
+	}
+}
+@media only screen and (max-width : 480px) {
+	body #wrapper{
+		width: 95%;
+		margin: 0 auto;
+	}
+	#wrapper #form{
+		width: 100%;
+		height: 255px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+	#form textarea{
+		width: 100%;
+	}
+}
+@media only screen and (max-width : 320px) {
+	body #wrapper{
+		width: 95%;
+		margin: 0 auto;
+	}
+	#wrapper #form{
+		width: 100%;
+		height: 270px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+	#form textarea{
+		width: 100%;
+	}
+	#wrapper header{
+		display:hidden;
+	}
+}
